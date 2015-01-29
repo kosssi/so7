@@ -13,6 +13,7 @@
     "placeholders": "3.0.x",
     "lodash": "~2.4.1",
     "angular-parse": "*",
+    "classie": "1.0.1",
     "angulartics": "~0.17.1"
   }
 }
