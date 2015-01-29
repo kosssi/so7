@@ -1,25 +1,200 @@
 doctype html
 html(lang="en", ng-app="angularParseBoilerplate")
   head
-    title AngularJS Parse Boilerplate
+    title Anneso7
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1")
     link(rel="stylesheet", href="css/app.css")
 
-  body
-    a(href='https://github.com/jbeurel/angular-parse-boilerplate')
-      img(style='position: absolute; top: 0; right: 0; border: 0;', src='https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67', alt='Fork me on GitHub', data-canonical-src='https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png')
-    header#top.navbar.navbar-static-top.bs-docs-nav(role='banner')
-      .container
-        .navbar-header
-          a.navbar-brand
-            i.glyphicon.glyphicon-thumbs-up
-            |  AngularJS Parse Boilerplate
+  body#page-top.index
 
-    main.container(ui-view)
+    // Navigation
+    nav.navbar.navbar-default.navbar-fixed-top
+        .container
+          // Brand and toggle get grouped for better mobile display
+          .navbar-header.page-scroll
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='#page-top') Anne-Sophie Gillet
+          // Collect the nav links, forms, and other content for toggling
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            ul.nav.navbar-nav.navbar-right.text-center
+              li.hidden
+                a(href='#page-top')
+              li.page-scroll
+                a(href='#portfolio') Réalisation
+              li.page-scroll
+                a(href='#about') Qui suis-je ?
+              li.page-scroll
+                a(href='#contact') Contact
+
+    // Header
+    header
+      .container
+        .row
+          .col-lg-12
+            img.home(src='img/home.svg', alt='')
+
+    // Portfolio Grid Section
+    section#portfolio
+      .container
+        .row
+          .col-lg-12.text-center
+            h2 R&eacute;alisation
+            hr.star-primary
+            h4 Quelques projets en recettes...
+            p
+              | Entreprises de toutes contr&eacute;es, dirigeant en qu&ecirc;te d&apos;une communication visuelle color&eacute;e, PME
+              | fra&icirc;chement lanc&eacute;e, service communication overbook&eacute;, pour d&eacute;tenteur d&apos;un projet vitamin&eacute;...
+            p J&apos;aime cr&eacute;er et travailler pour tous les publics. La preuve en images...
+        .row
+          .col-sm-4.portfolio-item
+            a.portfolio-link(href='#portfolioModal1', data-toggle='modal')
+              .caption
+                .caption-content
+                  i.fa.fa-search-plus.fa-3x
+              img.img-responsive(src='img/portfolio/cabin.png', alt='')
+          .col-sm-4.portfolio-item
+            a.portfolio-link(href='#portfolioModal2', data-toggle='modal')
+              .caption
+                .caption-content
+                  i.fa.fa-search-plus.fa-3x
+              img.img-responsive(src='img/portfolio/cake.png', alt='')
+          .col-sm-4.portfolio-item
+            a.portfolio-link(href='#portfolioModal3', data-toggle='modal')
+              .caption
+                .caption-content
+                  i.fa.fa-search-plus.fa-3x
+              img.img-responsive(src='img/portfolio/circus.png', alt='')
+          .col-sm-4.portfolio-item
+            a.portfolio-link(href='#portfolioModal4', data-toggle='modal')
+              .caption
+                .caption-content
+                  i.fa.fa-search-plus.fa-3x
+              img.img-responsive(src='img/portfolio/game.png', alt='')
+          .col-sm-4.portfolio-item
+            a.portfolio-link(href='#portfolioModal5', data-toggle='modal')
+              .caption
+                .caption-content
+                  i.fa.fa-search-plus.fa-3x
+              img.img-responsive(src='img/portfolio/safe.png', alt='')
+          .col-sm-4.portfolio-item
+            a.portfolio-link(href='#portfolioModal6', data-toggle='modal')
+              .caption
+                .caption-content
+                  i.fa.fa-search-plus.fa-3x
+              img.img-responsive(src='img/portfolio/submarine.png', alt='')
+
+    // About Section
+    section#about.success
+      .container
+        .row
+          .col-lg-12.text-center
+            h2 Qui suis-je ?
+            hr.star-light
+            h4 Toutes les facettes d&apos;Anne-So 7
+        .row
+          .col-lg-12.text-center
+            ul
+              li
+                a(href='') Chouette
+              li
+                a(href='') Petite
+              li
+                a(href='') Dynamique
+              li
+                a(href='') Souriante
+              li
+                a(href='') Arc en ciel
+              li
+                a(href='') Cr&eacute;ative
+              li
+                a(href='') P&eacute;tillante
+
+    // Contact Section
+    section#contact
+      .container
+        .row
+          .col-lg-12.text-center
+            h2 Contact Me
+            hr.star-primary
+        .row
+          .col-lg-8.col-lg-offset-2
+            // To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.
+            // The form should work on most web servers, but if the form is not working you may need to configure your web server differently.
+            form#contactForm(name='sentMessage', novalidate='')
+              .row.control-group
+                .form-group.col-xs-12.floating-label-form-group.controls
+                  label Name
+                  input#name.form-control(type='text', placeholder='Name', required='', data-validation-required-message='Please enter your name.')
+                  p.help-block.text-danger
+              .row.control-group
+                .form-group.col-xs-12.floating-label-form-group.controls
+                  label Email Address
+                  input#email.form-control(type='email', placeholder='Email Address', required='', data-validation-required-message='Please enter your email address.')
+                  p.help-block.text-danger
+              .row.control-group
+                .form-group.col-xs-12.floating-label-form-group.controls
+                  label Phone Number
+                  input#phone.form-control(type='tel', placeholder='Phone Number', required='', data-validation-required-message='Please enter your phone number.')
+                  p.help-block.text-danger
+              .row.control-group
+                .form-group.col-xs-12.floating-label-form-group.controls
+                  label Message
+                  textarea#message.form-control(rows='5', placeholder='Message', required='', data-validation-required-message='Please enter a message.')
+                  p.help-block.text-danger
+              br
+              #success
+              .row
+                .form-group.col-xs-12
+                  button.btn.btn-success.btn-lg(type='submit') Send
+
+    // Footer
+    footer.text-center
+      .footer-above
+        .container
+          .row
+            .footer-col.col-md-4
+              h3 Location
+              p
+                | 3481 Melrose Place
+                br
+                | Beverly Hills, CA 90210
+            .footer-col.col-md-4
+              h3 Around the Web
+              ul.list-inline
+                li
+                  a.btn-social.btn-outline(href='#')
+                    i.fa.fa-fw.fa-facebook
+                li
+                  a.btn-social.btn-outline(href='#')
+                    i.fa.fa-fw.fa-google-plus
+                li
+                  a.btn-social.btn-outline(href='#')
+                    i.fa.fa-fw.fa-twitter
+                li
+                  a.btn-social.btn-outline(href='#')
+                    i.fa.fa-fw.fa-linkedin
+                li
+                  a.btn-social.btn-outline(href='#')
+                    i.fa.fa-fw.fa-dribbble
+            .footer-col.col-md-4
+              h3 About Freelancer
+              p
+                | Freelance is a free to use, open source Bootstrap theme created by
+                a(href='http://startbootstrap.com') Start Bootstrap
+                | .
+      .footer-below
+        .container
+          .row
+            .col-lg-12
+              | Copyright &copy; Your Website 2014
+
 
     script(src="js/vendor.js")
     script(src="js/templates.js")
     script(src="js/app.js")
-    script (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-38757134-3', 'auto');
