@@ -6205,3 +6205,43 @@ section {
 #about {
   background-color: #834695;
 }
+
+footer {
+  padding-top: 20px;
+  background-color: #ee779b;
+}
+footer .footer-col {
+  margin-bottom: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+footer h4 {
+  padding: 10px;
+  font-size: 16px;
+}
+footer a {
+  font-size: 16px;
+  color: white;
+}
+footer a:hover,
+footer a:focus {
+  color: white;
+}
+footer a.round {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 100%;
+  position: relative;
+  margin-bottom: 10px;
+}
+footer img {
+  position: absolute;
+  top: 35px;
+  left: 25px;
+  width: 100px;
+  height: 100px;
+}
