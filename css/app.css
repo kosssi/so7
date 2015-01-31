@@ -6262,4 +6262,14 @@ footer img {
 #portfolio {
   background-color: #45b79f;
 }
+#portfolio p:first-child {
+  margin-top: 40px;
+}
+#portfolio p:last-child {
+  margin-bottom: 40px;
+}
+#portfolio img {
+  width: 300px;
+  margin-bottom: 20px;
+}
 
