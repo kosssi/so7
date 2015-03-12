@@ -1,3 +1,11 @@
+mixin portfolio(name, url, modal)
+  .col-sm-6.portfolio-item.text-center.col-md-4
+    a.portfolio-link(href=modal, data-toggle='modal')
+      .caption
+        .caption-content
+          i.fa.fa-search-plus.fa-3x
+      img.img-responsive(src=url, alt=name)
+
 // Portfolio Grid Section
 section#portfolio
   .container
@@ -11,39 +19,9 @@ section#portfolio
             | fraîchement lancée, service communication overbooké, pour détenteur d'un projet vitaminé...
           p J'aime créer et travailler pour tous les publics. La preuve en images...
     .row
-      .col-sm-4.portfolio-item
-        a.portfolio-link(href='#portfolioModal1', data-toggle='modal')
-          .caption
-            .caption-content
-              i.fa.fa-search-plus.fa-3x
-          img.img-responsive(src='img/portfolio/ABC.jpg', alt='')
-      .col-sm-4.portfolio-item
-        a.portfolio-link(href='#portfolioModal2', data-toggle='modal')
-          .caption
-            .caption-content
-              i.fa.fa-search-plus.fa-3x
-          img.img-responsive(src='img/portfolio/home.jpg', alt='')
-      .col-sm-4.portfolio-item
-        a.portfolio-link(href='#portfolioModal3', data-toggle='modal')
-          .caption
-            .caption-content
-              i.fa.fa-search-plus.fa-3x
-          img.img-responsive(src='img/portfolio/scoot.jpg', alt='')
-      .col-sm-4.portfolio-item
-        a.portfolio-link(href='#portfolioModal4', data-toggle='modal')
-          .caption
-            .caption-content
-              i.fa.fa-search-plus.fa-3x
-          img.img-responsive(src='img/portfolio/soft.jpg', alt='')
-      .col-sm-4.portfolio-item
-        a.portfolio-link(href='#portfolioModal5', data-toggle='modal')
-          .caption
-            .caption-content
-              i.fa.fa-search-plus.fa-3x
-          img.img-responsive(src='img/portfolio/yr.jpg', alt='')
-      .col-sm-4.portfolio-item
-        a.portfolio-link(href='#portfolioModal6', data-toggle='modal')
-          .caption
-            .caption-content
-              i.fa.fa-search-plus.fa-3x
-          img.img-responsive(src='img/portfolio/yr1.jpg', alt='')
+      +portfolio('', 'img/portfolio/ABC.jpg', '#portfolioModal1')
+      +portfolio('', 'img/portfolio/home.jpg', '#portfolioModal2')
+      +portfolio('', 'img/portfolio/scoot.jpg', '#portfolioModal3')
+      +portfolio('', 'img/portfolio/soft.jpg', '#portfolioModal4')
+      +portfolio('', 'img/portfolio/yr.jpg', '#portfolioModal5')
+      +portfolio('', 'img/portfolio/yr1.jpg', '#portfolioModal6')

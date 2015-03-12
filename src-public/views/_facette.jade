@@ -1,3 +1,15 @@
+mixin facette(name, title, paragraph, img, color)
+  .modal.fade(tabindex='-1', role='dialog', aria-labelledby= name, aria-hidden='true', id= name)
+    .modal-dialog
+      .modal-content
+        .modal-body
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') &times;
+          .round.backgound-color2
+            img(src= img)
+          h2.text-center= title
+          p.text-center= paragraph
+
 // About Section
 section#about.success
   .container
@@ -9,16 +21,51 @@ section#about.success
       .col-lg-12.text-center
         ul
           li
-            a(href='') Chouette
+            a(data-toggle='modal', data-target='#chouette') Chouette
           li
-            a(href='') Petite
+            a(data-toggle='modal', data-target='#petite') Petite
           li
-            a(href='') Dynamique
+            a(data-toggle='modal', data-target='#dynamique') Dynamique
           li
-            a(href='') Souriante
+            a(data-toggle='modal', data-target='#souriante') Souriante
           li
-            a(href='') Arc en ciel
+            a(data-toggle='modal', data-target='#arc-en-ciel') Arc en ciel
           li
-            a(href='') Cr&eacute;ative
+            a(data-toggle='modal', data-target='#creative') Créative
           li
-            a(href='') P&eacute;tillante
+            a(data-toggle='modal', data-target='#petillante') Pétillante
+  +facette(
+    'chouette', 'Chouette',
+    'Positive et enjouée, j’aime rencontrer, écouter, discuter, imaginer, m’extasier, créer, m’évader... Et bien sur dessiner !',
+    'img/hibou.svg', 'color2'
+  )
+  +facette(
+    'petite', 'Petite',
+    'Positive et enjouée, j’aime rencontrer, écouter, discuter, imaginer, m’extasier, créer, m’évader... Et bien sur dessiner !',
+    'img/petite.svg', 'color2'
+  )
+  +facette(
+    'dynamique', 'Dynamique',
+    'Certes je ne me distingue pas par une importante taille de jambes, mais je suis montée sur ressorts ! Très active, je mène une vie tambour battant. Avec une perspective : profiter de chaque instant. Ma manière de travailler est imprégnée de ce mode de vie : toujours plus rapide et réactive pour mes clients !',
+    'img/dynamique.svg', 'color2'
+  )
+  +facette(
+    'souriante', 'Souriante',
+    'Positive et enjouée, j’aime rencontrer, écouter, discuter, imaginer, m’extasier, créer, m’évader... Et bien sur dessiner !',
+    'img/souriante.svg', 'color2'
+  )
+  +facette(
+    'arc-en-ciel', 'Arc en ciel',
+    'Sensible à l’art, amatrice et créatrice de design, j’aime les visuels colorés. Jouer sur les formes, les typographies, les nuances. Moi, Anne So7, me mettrai en quatre, mais vous en verrez de toutes les couleurs !',
+    'img/arc-en-ciel.svg', 'color2'
+  )
+  +facette(
+    'creative', 'Créative',
+    'Positive et enjouée, j’aime rencontrer, écouter, discuter, imaginer, m’extasier, créer, m’évader... Et bien sur dessiner !',
+    'img/creative.svg', 'color2'
+  )
+  +facette(
+    'petillante', 'Pétillante',
+    'Pleine d’énergie dans la vie, j’essaie de saupoudrer mes réalisations d’énergie et vitalité. A cet titre, j’ai un attrait tout particulier pour raviver une communication ancienne ou mettre du peps à une plus moderne. Anne So7 aussi donne des ailes !',
+    'img/petillante.svg', 'color2'
+  )

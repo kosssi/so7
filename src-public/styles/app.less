@@ -1,4 +1,5 @@
-@import "../../bower_components/bootstrap/less/bootstrap.less";
+@import "../../bower_components/bootstrap/less/bootstrap";
+@import "variables";
 
 body {
   background-color: #50a6dc;
@@ -7,4 +8,24 @@ body {
 
 section {
   padding: 20px;
+}
+
+.round {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 20px auto 0;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 100%;
+  position: relative;
+  margin-bottom: 10px;
+
+  img {
+    position: absolute;
+    top: 35px;
+    left: 25px;
+    width: 100px;
+    height: 100px;
+  }
 }
