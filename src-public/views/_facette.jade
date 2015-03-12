@@ -1,14 +1,15 @@
-mixin facette(name, title, paragraph, img, color)
+mixin facette(name, title, paragraph, img, color, titleColor)
   .modal.fade(tabindex='-1', role='dialog', aria-labelledby= name, aria-hidden='true', id= name)
     .modal-dialog
       .modal-content
         .modal-body
           button.close(type='button', data-dismiss='modal', aria-label='Close')
             span(aria-hidden='true') &times;
-          .round.backgound-color2
+          div(class='round backgound-' + color)
             img(src= img)
-          h2.text-center= title
-          p.text-center= paragraph
+          h2(class='text-center ' + titleColor)= title
+          p.text-center
+            | !{paragraph}
 
 // About Section
 section#about.success
@@ -37,35 +38,35 @@ section#about.success
   +facette(
     'chouette', 'Chouette',
     'Positive et enjouée, j’aime rencontrer, écouter, discuter, imaginer, m’extasier, créer, m’évader... Et bien sur dessiner !',
-    'img/hibou.svg', 'color2'
+    'img/hibou.svg', 'color2', 'color2'
   )
   +facette(
     'petite', 'Petite',
-    'Positive et enjouée, j’aime rencontrer, écouter, discuter, imaginer, m’extasier, créer, m’évader... Et bien sur dessiner !',
-    'img/petite.svg', 'color2'
+    "Originaire de Limoges (ville dont je me sens proche par la taille notamment !) Je n'aurais pas pu faire carrière dans le basket-ball... <br>Mais comptez sur moi pour prendre de la hauteur dans vos projets !",
+    'img/petite.svg', 'color1', 'color4'
   )
   +facette(
     'dynamique', 'Dynamique',
     'Certes je ne me distingue pas par une importante taille de jambes, mais je suis montée sur ressorts ! Très active, je mène une vie tambour battant. Avec une perspective : profiter de chaque instant. Ma manière de travailler est imprégnée de ce mode de vie : toujours plus rapide et réactive pour mes clients !',
-    'img/dynamique.svg', 'color2'
+    'img/dynamique.svg', 'color3', 'color5'
   )
   +facette(
     'souriante', 'Souriante',
-    'Positive et enjouée, j’aime rencontrer, écouter, discuter, imaginer, m’extasier, créer, m’évader... Et bien sur dessiner !',
-    'img/souriante.svg', 'color2'
+    '',
+    'img/souriante.svg', 'color3', 'color5'
   )
   +facette(
     'arc-en-ciel', 'Arc en ciel',
-    'Sensible à l’art, amatrice et créatrice de design, j’aime les visuels colorés. Jouer sur les formes, les typographies, les nuances. Moi, Anne So7, me mettrai en quatre, mais vous en verrez de toutes les couleurs !',
-    'img/arc-en-ciel.svg', 'color2'
+    'Sensible à l’art, amatrice et créatrice de design, j’aime les visuels colorés. Jouer sur les formes, les typographies, les nuances. <br>Moi, Anne So7, me mettrai en quatre, mais vous en verrez de toutes les couleurs !',
+    'img/arc-en-ciel.svg', 'color2', 'color5'
   )
   +facette(
     'creative', 'Créative',
-    'Positive et enjouée, j’aime rencontrer, écouter, discuter, imaginer, m’extasier, créer, m’évader... Et bien sur dessiner !',
-    'img/creative.svg', 'color2'
+    '',
+    'img/creative.svg', 'color2', 'color4'
   )
   +facette(
     'petillante', 'Pétillante',
     'Pleine d’énergie dans la vie, j’essaie de saupoudrer mes réalisations d’énergie et vitalité. A cet titre, j’ai un attrait tout particulier pour raviver une communication ancienne ou mettre du peps à une plus moderne. Anne So7 aussi donne des ailes !',
-    'img/petillante.svg', 'color2'
+    'img/petillante.svg', 'color3', 'color3'
   )
