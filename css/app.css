@@ -14099,7 +14099,7 @@ body {
   color: white;
 }
 section {
-  padding: 20px;
+  padding: 100px 20px;
 }
 .round {
   display: block;
@@ -14121,7 +14121,7 @@ section {
 }
 
 footer {
-  padding-top: 20px;
+  padding: 100px 0 300px;
   background-color: #ee779b;
 }
 footer .footer-col {
@@ -14157,7 +14157,7 @@ footer a:focus {
   border-radius: 4px;
 }
 #about ul {
-  padding: 30px 0;
+  padding: 30px 0 0;
   margin: 0;
   list-style-type: none;
 }
@@ -14167,24 +14167,35 @@ footer a:focus {
 }
 #about a {
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 34px;
   font-weight: lighter;
   color: white;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
+.logo {
+  padding: 80px 0 20px;
+  width: 130px;
+}
 .home {
-  padding: 100px 0;
+  padding: 40px 0 100px;
 }
 
 .navbar-default {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(55, 55, 55, 0.3) !important;
+  box-shadow: 0px 8px 17px 0px rgba(0, 0, 0, 0.2), 0px 6px 20px 0px rgba(0, 0, 0, 0.19);
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: white;
 }
 .navbar-default .navbar-brand {
   color: white;
+}
+.navbar-fixed-top {
+  visibility: hidden;
+}
+.navbar-fixed-top.navbar-shrink {
+  visibility: visible;
 }
 .navbar.navbar-default.navbar-fixed-top {
   border-width: 0;
@@ -14199,6 +14210,17 @@ footer a:focus {
 .navbar-default .navbar-toggle:hover {
   background-color: transparent;
   border-color: white;
+}
+.navbar-fixed-top .row > div {
+  padding: 10px;
+}
+.navbar-fixed-top .logo {
+  width: 60px;
+  padding: 0;
+}
+.navbar-nav > li > a {
+  line-height: 30px;
+  font-weight: bold;
 }
 
 #portfolio {
