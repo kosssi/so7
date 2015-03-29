@@ -3,6 +3,7 @@
   "version": "",
   "dependencies": {
     "bootstrap": "3.2.x",
+    "bootstrap-material-design": "0.3.x",
     "moment": "2.6.x",
     "placeholders": "3.0.x",
     "lodash": "~2.4.1",

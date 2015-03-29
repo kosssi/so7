@@ -1,10 +1,10 @@
 mixin portfolio(name, url, modal)
   .col-sm-6.portfolio-item.text-center.col-md-4
-    a.portfolio-link(href=modal, data-toggle='modal')
+    a.portfolio-link(href='portfolio.html')
+      img.img-responsive(src=url, alt=name)
       .caption
         .caption-content
-          i.fa.fa-search-plus.fa-3x
-      img.img-responsive(src=url, alt=name)
+          i.fa.fa-search-plus.fa-3x= name
 
 // Portfolio Grid Section
 section#portfolio
@@ -15,12 +15,14 @@ section#portfolio
         h4 Quelques projets en recettes...
         div
           p Entreprises de toutes contrées, dirigeant en quête d'une communication visuelle colorée,
-          p PME fraîchement lancée, service communication overbooké, pour détenteur d'un projet vitaminé...
-          p J'aime créer et travailler pour tous les publics. La preuve en images...
+            br
+            | PME fraîchement lancée, service communication overbooké, pour détenteur d'un projet vitaminé...
+            br
+            | J'aime créer et travailler pour tous les publics. La preuve en images...
     .row
-      +portfolio('', 'img/portfolio/ABC.jpg', '#portfolioModal1')
-      +portfolio('', 'img/portfolio/home.jpg', '#portfolioModal2')
-      +portfolio('', 'img/portfolio/scoot.jpg', '#portfolioModal3')
-      +portfolio('', 'img/portfolio/soft.jpg', '#portfolioModal4')
-      +portfolio('', 'img/portfolio/yr.jpg', '#portfolioModal5')
-      +portfolio('', 'img/portfolio/yr1.jpg', '#portfolioModal6')
+      +portfolio('Edition', 'img/portfolio/ABC.jpg', '#portfolioModal1')
+      +portfolio('Identité', 'img/portfolio/home.jpg', '#portfolioModal2')
+      +portfolio('Illustration', 'img/portfolio/scoot.jpg', '#portfolioModal3')
+      +portfolio('Web Design', 'img/portfolio/soft.jpg', '#portfolioModal4')
+      +portfolio('Affiche', 'img/portfolio/yr.jpg', '#portfolioModal5')
+      +portfolio('Faire-part', 'img/portfolio/yr1.jpg', '#portfolioModal6')

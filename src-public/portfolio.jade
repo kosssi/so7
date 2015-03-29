@@ -1,0 +1,144 @@
+doctype html
+html(lang="en", ng-app="angularParseBoilerplate")
+  head
+    title Anneso7
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="css/app.css")
+    // Page style
+    style.
+      * {
+      box-sizing: border-box;
+      }
+      .header-panel {
+      height: 100px;
+      position: relative;
+      z-index: 3;
+      }
+      .header-panel div {
+      position: relative;
+      height: 100%;
+      }
+      .header-panel h1 {
+      color: #FFF;
+      font-size: 20px;
+      font-weight: 400;
+      position: absolute;
+      bottom: 10px;
+      padding-left: 35px;
+      }
+      .menu {
+      overflow: auto;
+      padding: 0;
+      }
+      .menu, .menu * {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+      }
+      .menu ul {
+      padding: 0;
+      margin: 7px 0;
+      }
+      .menu ul li {
+      list-style: none;
+      padding: 20px 0 20px 50px;
+      font-size: 15px;
+      font-weight: normal;
+      cursor: pointer;
+      }
+      .menu ul li.active {
+      position: relative;
+      }
+      .menu ul li a {
+      color: rgb(51, 51, 51);
+      text-decoration: none;
+      }
+      .pages {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 4;
+      padding: 0;
+      overflow: auto;
+      }
+      .pages > div {
+      padding: 0 5px;
+      padding-top: 64px;
+      }
+      .pages .header {
+      color: rgb(82, 101, 162);
+      font-size: 24px;
+      font-weight: normal;
+      margin-top: 5px;
+      margin-bottom: 60px;
+      letter-spacing: 1.20000004768372px;
+      }
+      .page {
+      transform: translateY(1080px);
+      transition: transform 0 linear;
+      display: none;
+      opacity: 0;
+      font-size: 16px;
+      }
+      .page.active {
+      transform: translateY(0px);
+      transition: all 0.3s ease-out;
+      display: block;
+      opacity: 1;
+      }
+      #opensource {
+      color: rgba(0, 0, 0, 0.62);
+      position: fixed;
+      margin-top: 50px;
+      margin-left: 50px;
+      z-index: 100;
+      }
+      #source-modal h4 {
+      color: black;
+      }
+  body.backgound-color2
+
+    mixin portfolio(name, url, modal)
+      .col-xs-12.col-sm-6.col-md-4.col-lg-3
+        a.portfolio-link(href='portfolio.html')
+          img.img-responsive(src=url, alt=name)
+
+    .header-panel.shadow-z-2
+      .container-fluid
+        .row
+          .col-xs-3
+            h1 AnneSo7
+    .container-fluid.main
+      .row
+        nav.col-xs-4.col-sm-3.col-md-2.menu
+          ul
+            li.withripple(data-target='#edition')
+              a(href='#edition') Edition
+            li.active.withripple(data-target='#identité')
+              a(href='#identite') Identité
+            li.withripple(data-target='#illustration')
+              a(href='#illustration') Illustration
+            li.withripple.active(data-target='#web-design')
+              | Web Design
+              .ripple-wrapp
+            li.withripple(data-target='#affiche')
+              a(href='#affiche') Affiche
+            li.withripple(data-target='#faire-part')
+              a(href='#faire-part') Faire-part
+
+        .col-xs-8.col-sm-9.col-md-10.backgound-color1.images
+          +portfolio('Edition', 'img/portfolio/ABC.jpg', '#portfolioModal1')
+          +portfolio('Identité', 'img/portfolio/home.jpg', '#portfolioModal2')
+          +portfolio('Illustration', 'img/portfolio/scoot.jpg', '#portfolioModal3')
+          +portfolio('Web Design', 'img/portfolio/soft.jpg', '#portfolioModal4')
+          +portfolio('Affiche', 'img/portfolio/yr.jpg', '#portfolioModal5')
+          +portfolio('Faire-part', 'img/portfolio/yr1.jpg', '#portfolioModal6')
+          +portfolio('Edition', 'img/portfolio/ABC.jpg', '#portfolioModal1')
+          +portfolio('Identité', 'img/portfolio/home.jpg', '#portfolioModal2')
+          +portfolio('Illustration', 'img/portfolio/scoot.jpg', '#portfolioModal3')
+          +portfolio('Web Design', 'img/portfolio/soft.jpg', '#portfolioModal4')
+          +portfolio('Affiche', 'img/portfolio/yr.jpg', '#portfolioModal5')
+    script(src="js/vendor.js")
+    script(src="js/app.js")

@@ -1,5 +1,6 @@
 .navbar-default {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(55, 55, 55, 0.3)!important;
+  box-shadow: 0px 8px 17px 0px rgba(0, 0, 0, 0.2), 0px 6px 20px 0px rgba(0, 0, 0, 0.19);
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -8,6 +9,12 @@
 
 .navbar-default .navbar-brand {
   color: white;
+}
+.navbar-fixed-top {
+  &.navbar-shrink {
+    visibility: visible;
+  }
+  visibility: hidden;
 }
 
 .navbar.navbar-default.navbar-fixed-top {
@@ -21,4 +28,17 @@
 .navbar-default .navbar-toggle, .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
   background-color: transparent;
   border-color: white;
+}
+.navbar-fixed-top {
+  .row > div {
+    padding: 10px;
+  }
+  .logo {
+    width: 60px;
+    padding: 0;
+  }
+}
+.navbar-nav > li > a {
+  line-height: 30px;
+  font-weight: bold;
 }

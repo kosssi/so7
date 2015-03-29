@@ -1,21 +1,26 @@
 // Navigation
 nav.navbar.navbar-default.navbar-fixed-top
   .container
-    // Brand and toggle get grouped for better mobile display
-    .navbar-header.page-scroll
-      button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
-        span.sr-only Toggle navigation
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-    // Collect the nav links, forms, and other content for toggling
-    #bs-example-navbar-collapse-1.collapse.navbar-collapse
-      ul.nav.navbar-nav.navbar-right.text-center
-        li.hidden
-          a(href='#page-top')
-        li.page-scroll
-          a(href='#portfolio') Réalisation
-        li.page-scroll
-          a(href='#about') Qui suis-je ?
-        li.page-scroll
-          a(href='#contact') Contact
+    .row
+      .col-xs-3
+        a.floating-label(href='/')
+          img.logo(src='img/anneso7.svg', alt='')
+      // Brand and toggle get grouped for better mobile display
+      .col-xs-9
+        .navbar-header.page-scroll
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right.text-center
+            li.hidden
+              a(href='#page-top')
+            li.page-scroll
+              a(href='index.html#portfolio') Réalisation
+            li.page-scroll
+              a(href='index.html#about') Qui suis-je ?
+            li.page-scroll
+              a(href='index.html#contact') Contact
